@@ -24,6 +24,17 @@ public class MyLinkedList<K> {
             this.head.setNext(tempNode);
         }
     }
+    public void addLast(INode<K> newNode) {
+        if (this.head == null) {
+            this.head = newNode;
+        }
+        if (tail == null) {
+            tail = newNode;
+        } else {
+            this.tail.setNext(newNode);
+            tail = newNode;
+        }
+    }
     public void printMyNodes()
     {
         StringBuffer myNodes = new StringBuffer("MyNodes");
